@@ -1,0 +1,15 @@
+diff --git a/pm_shared/pm_shared.c b/pm_shared/pm_shared.c
+index 925d040..7292adc 100644
+--- a/pm_shared/pm_shared.c
++++ b/pm_shared/pm_shared.c
+@@ -2624,8 +2624,8 @@ void PM_Jump( void )
+ 	// In the air now.
+ 	pmove->onground = -1;
+ 
+-	if( pmove->multiplayer )
+-		bunnyjump = atoi( pmove->PM_Info_ValueForKey( pmove->physinfo, "bj" ) ) ? true : false;
++	// also honor mp_bhopcap 0 in singleplayer (speedrunning)
++	bunnyjump = atoi( pmove->PM_Info_ValueForKey( pmove->physinfo, "bj" ) ) ? true : false;
+ 
+ 	if( !bunnyjump )
+ 		PM_PreventMegaBunnyJumping();
