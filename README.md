@@ -122,6 +122,16 @@ You'd be better off downloading the xash3D [mobile ports](https://github.com/FWG
 
 Nope, I'm not the maintainer of this port, I just wrote a frontend for it, please submit issues to the engine port repo instead: https://github.com/yohimik/webxash3d-fwgs
 
+#### How do I enable speedrun physics (no bunnyhop cap, object boosting)?
+
+Add these to the launch args:
+
+```
++mp_bhopcap 0 +sv_pushable_fixed_tick_fudge -1
+```
+
+`sv_pushable_fixed_tick_fudge -1` restores the original pushable pull behaviour (object boosting). `mp_bhopcap 0` only works in singleplayer with an hlsdk build that includes [patches/hlsdk-bhopcap-singleplayer.patch](patches/hlsdk-bhopcap-singleplayer.patch).
+
 ## Building/developing
 Clone the repo:
 

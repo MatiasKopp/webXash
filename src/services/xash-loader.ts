@@ -21,9 +21,9 @@ import webgl2URL from 'xash3d-fwgs/libref_webgl2.wasm?url';
 // @ts-ignore -- vite url imports
 import extrasURL from 'xash3d-fwgs/extras.pk3?url';
 // @ts-ignore -- vite url imports
-import HLClientURL from 'hlsdk-portable/cl_dlls/client_emscripten_wasm32.wasm?url';
+import HLClientURL from '/@/wasm/hlsdk/cl_dlls/client_emscripten_wasm32.wasm?url';
 // @ts-ignore -- vite url imports
-import HLServerURL from 'hlsdk-portable/dlls/hl_emscripten_wasm32.wasm?url';
+import HLServerURL from '/@/wasm/hlsdk/dlls/hl_emscripten_wasm32.wasm?url';
 // @ts-ignore -- vite url imports
 import CSMenuURL from 'cs16-client/cl_dll/menu_emscripten_wasm32.wasm?url';
 // @ts-ignore -- vite url imports
